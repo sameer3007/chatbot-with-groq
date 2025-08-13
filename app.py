@@ -35,7 +35,7 @@ os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
 
 # Initialize the model
 from langchain_groq import ChatGroq
-model = ChatGroq(model="gemma2-9b-it", groq_api_key=os.getenv("GROQ_API_KEY"))
+model = ChatGroq(model="llama-3.1-8b-instant", groq_api_key=os.getenv("GROQ_API_KEY"))
 
 ## Prompt Template
 prompt=ChatPromptTemplate.from_messages(
@@ -64,5 +64,6 @@ if user_input :
     st.write(response)
 else:
     st.write("Please provide the user input")
+
 
 
